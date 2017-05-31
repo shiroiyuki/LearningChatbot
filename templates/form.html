@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href=src="{{url_for('static', filename='js/list.js') }}">
+	</head>
+	<body>
+		<p>{% if name %} Hi, {{name}}. Welcome!{% endif %}</p>
+		<form action="/whoareyou" method="POST">
+			<label for="">Name:
+				<input type="text" name="name" value="">
+			</label>
+			<input type="radio" name="options" id="option1" value="option1"> Option1 </input><br>
+			<input type="radio" name="options" id="option2" value="option2"> Option2 </input><br>
+			<input type="radio" name="options" id="option3" value="option3"> Option3 </input><br>
+			<input type="submit" value="Submit">
+		</form>
+		<p>{% if choose %} Hi, {{choose}}. Welcome!{% endif %}</p>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+	</head>
+	<body>
+        <div id = "global">
+		<p>{% if name %} Hi, {{name}}. Welcome!{% endif %}</p>
+		<div id = "chatbot">
+        
+        </div>
+        <div id = "chatbox">
+            <form action="/whoareyou" method="POST">
+                <label for="">
+                    <input type="text" name="name" value="">
+                </label>
+                <input type="submit" value="Submit">
+                <input type="button" value="Speak">
+            </form>
+        </div>
+		<p>{% if choose %} Hi, {{choose}}. Welcome!{% endif %}</p>
+        </div>
+	</body>
+</html>
