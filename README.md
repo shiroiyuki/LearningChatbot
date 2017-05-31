@@ -7,5 +7,5 @@ flask 簡易server架構
 ===========================
 static 下放置 javascript & css file
 -------------------------------------
-template 下放置 html file
+templates 下放置 html file
 --------------------------------------
