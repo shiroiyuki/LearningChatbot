@@ -1,24 +1,30 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
-	</head>
-	<body>
-        <div id = "global">
-		<p>{% if name %} Hi, {{name}}. Welcome!{% endif %}</p>
-		<div id = "chatbot">
-        
-        </div>
-        <div id = "chatbox">
-            <form action="/whoareyou" method="POST">
-                <label for="">
-                    <input type="text" name="name" value="">
-                </label>
-                <input type="submit" value="Submit">
-                <input type="button" value="Speak">
-            </form>
-        </div>
-		<p>{% if choose %} Hi, {{choose}}. Welcome!{% endif %}</p>
-        </div>
-	</body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+  </head>
+  <body>
+    <div id = "global">
+      <div id = "chatbot">
+        <p>{% if name %} {{name[0]}}{% endif %}<br>
+        {% if name %} {{name[1]}}{% endif %}<br>
+        {% if name %} {{name[2]}}{% endif %}<br>
+        {% if name %} {{name[3]}}{% endif %}<br>
+        {% if name %} {{name[4]}}{% endif %}<br>
+        {% if name %} {{name[5]}}{% endif %}<br>
+        {% if name %} {{name[6]}}{% endif %}<br>
+        {% if name %} {{name[7]}}{% endif %}<br>
+        {% if name %} {{name[8]}}{% endif %}<br>
+        {% if name %} {{name[9]}}{% endif %}</p>
+      </div>
+      <div id = "chatbox">
+        <form id = "layout" action="/whoareyou" method="POST">
+          <input id = "text" type="text" name="name" value="">
+          <input id = "btn1" type="submit" value="Submit">
+          <input id = "btn2" type="button" value="Speak">
+        </form>
+      </div>
+      <p>{% if choose %} Hi, {{choose}}. Welcome!{% endif %}</p>
+    </div>
+  </body>
 </html>
