@@ -24,7 +24,7 @@ def whoareyou():
     if request.method == "POST":
         name = request.form.get("name")
         if name is not "":
-            for i in xrange(0,6) :
+            for i in range(0,6) :
                 data[i] = data[i+1]
             try:
                 result = bot.get_response(name)   
